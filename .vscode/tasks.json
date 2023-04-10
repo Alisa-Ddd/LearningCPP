@@ -1,0 +1,44 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe build active file",
+			"command": "C:\\msys64\\mingw64\\in\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g3",//maximum debug information inseamna g3
+				"-Wall",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "C:\\msys64\\mingw64\\bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:\\msys64\\mingw64\\bin\\g++.exe"
+		},
+		{//deci balaria asta de jos o sa faca build (adica Run Build Task) si execute al fisierului rezultat in one go sa nu mai stau sa le fac eu
+			"type": "shell",
+			"label": "Run C/C++ Program: g++.exe",
+			//										partea asta este to build exe file										si partea asta este pentru run exe file
+			//daca vreau sa mai pun alte comenzi trebuie sa folosesc &, e mai usurel asa decat sa scriu mereu de mana g++ -o etc etc
+			//punem numele de fisiere in ""
+			"command": "C:\\msys64\\mingw64\\bin\\g++.exe -g3 -Wall \"${file}\" -o \"${fileDirname}\"\\${fileBasenameNoExtension}.exe\"; \"${fileDirname}\\${fileBasenameNoExtension}.exe\"",			
+			"options": {
+				"cwd": "C:\\msys64\\mingw64\\bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"detail": "compiler: C:\\msys64\\ucrt64\\bin\\g++.exe"
+		}
+	]
+}
