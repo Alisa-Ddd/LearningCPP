@@ -10,8 +10,8 @@ using namespace std;
 int main()
 {
     int n,i,nrmin,nrmax,x;
-    ifstream fin("C:\\Users\\cring\\OneDrive\\Documents\\Programare\\LearningCPP\\CitireScriereFisiere\\nrin.txt");
-    ofstream fout("C:\\Users\\cring\\OneDrive\\Documents\\Programare\\LearningCPP\\CitireScriereFisiere\\nrout.txt");
+    ifstream fin("CitireScriereFisiere\\nrin.txt");
+    ofstream fout("CitireScriereFisiere\\nrout.txt");
 
     //if the file is not succesfully opened, give an error message and return 1
     //!fin este identic cu !fin.good sau fin.bad sau fin.fail 
