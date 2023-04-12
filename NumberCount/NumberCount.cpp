@@ -11,7 +11,7 @@ using namespace std;
 
 int main()
 {
-    ifstream fin("C:\\Users\\cring\\OneDrive\\Documents\\Programare\\LearningCPP\\NumberCount\\nrin.txt");
+    ifstream fin("NumberCount\\nrin.txt");
 
 //is_open testeaza daca fisierul a fost deschis cu success
     if(!fin.is_open())
@@ -32,6 +32,6 @@ int main()
     cout<<"numarul de valori din fisier este: "<<i<<endl;
     return 0;
 
-
+    fin.close();
 
 }
