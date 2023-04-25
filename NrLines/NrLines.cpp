@@ -6,7 +6,8 @@ using namespace std;
 int main()
 {
     int i=0;
-    string line;
+    char c;
+    //string line;
     //citim fisierul NrLines
     ifstream fin("NrLines\\NrLines.txt");
     
@@ -16,10 +17,12 @@ int main()
         cout<<"fisierul nu a putut fi deschis"<<endl;;
         return 1;
     }
-
+    /*varianta1 
     //cat timp avem linii in fisier si nu am ajuns la final
-    while(getline(fin,line))
+    while(getline(fin,line))*/
+    while(fin.get(c))
     {
+        if(c=='\n')
         //cand este citita o linie, maresc contorul
         i++;
     }
