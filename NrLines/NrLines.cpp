@@ -5,9 +5,10 @@ using namespace std;
 
 int main()
 {
-    int x;
+    int i=0;
+    string line;
     //citim fisierul NrLines
-    ifstream fin("NrLines\\NrLines.cpp");
+    ifstream fin("NrLines\\NrLines.txt");
     
     //testam ca putem sa deschidem fisierul
     if(!fin)
@@ -16,8 +17,14 @@ int main()
         return 1;
     }
 
-    fin>>x;
-    cout<<"primul integer din fisier este: "<<x<<endl;
+    //cat timp avem linii in fisier si nu am ajuns la final
+    while(getline(fin,line))
+    {
+        //cand este citita o linie, maresc contorul
+        i++;
+    }
+
+    cout<<"numarul de linii din fisier este:"<<i<<endl;
 
     return 0;
 }
